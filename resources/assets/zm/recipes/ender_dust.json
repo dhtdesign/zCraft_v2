@@ -1,0 +1,20 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+        {
+            "item": "zm:ender_pearl_dust"
+        },
+        {
+            "item": "zm:dust_iron"
+        }
+
+    ],
+
+    "result": 
+    {
+        "item": "zm:ender_dust",
+        "count": 1
+    }
+}

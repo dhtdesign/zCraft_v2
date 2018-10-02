@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "zm:ender_ingot"
+    }
+
+    ],
+
+    "result": 
+    {
+        "item": "zm:ender_nugget",
+        "count": 9
+    }
+}

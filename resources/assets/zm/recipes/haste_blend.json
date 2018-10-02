@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#G#",
+        "RXR",
+        "#G#"
+    ],
+    "key": {
+        "#": {
+            "item": "zm:sugar_cube"
+        },
+        "X": {
+            "item": "minecraft:sugar"
+        },
+        "G": {
+            "item": "minecraft:glowstone_dust"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "item": "zm:haste_blend",
+        "count": 1
+    }
+}

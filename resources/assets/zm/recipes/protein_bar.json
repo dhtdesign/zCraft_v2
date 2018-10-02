@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern": 
+    [
+        "SCS",
+        "WEW",
+        "SCS"
+    ],
+    
+    "key": 
+    {
+        "S": 
+        {
+            "item": "zm:sugar_cube"
+        },
+        "C": 
+        {
+            "item": "minecraft:cocoa_beans"
+        },
+        "W": 
+        {
+            "item": "minecraft:wheat_seeds"
+        },
+        "E": 
+        {
+            "item": "minecraft:egg"
+        }
+    },
+    
+    "result": 
+    {
+        "item": "zm:protein_bar",
+        "count": 1
+    }
+}

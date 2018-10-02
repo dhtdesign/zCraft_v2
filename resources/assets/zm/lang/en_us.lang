@@ -1,0 +1,42 @@
+
+itemGroup.tabzCraft=zCraft
+
+//Items
+item.ender_ingot.name=Ender Infused Ingot
+item.ender_nugget.name=Ender Infused Nugget
+item.ender_gear.name=Ender Infused Gear [WIP]
+item.ender_crystal.name=Ender Crystal [WIP]
+item.dust_iron.name=Iron Dust
+item.ender_dust.name=Ender Infused Dust
+item.ender_pearl_dust.name=Ender Pearl Dust
+
+//Potions & Food
+item.haste_blend.name=Haste Blend
+item.explorers_blend.name=Explorers Blend
+item.hunters_blend.name=Hunters Blend
+item.jump_blend.name=Jump Blend
+item.protein_bar.name=Protein Bar
+item.sugar_cube.name=Sugar Cube
+
+
+
+
+//Tools
+item.ender_sword.name=Ender Infused Sword
+item.ender_axe.name=Ender Infused Axe
+item.ender_pickaxe.name=Ender Infused Pickaxe
+item.ender_shovel.name=Ender Infused Shovel
+item.ender_hoe.name=Ender Infused Hoe
+item.hammer.name=§r§eHammer [WIP]
+
+//Armor
+item.ender_boots.name=Ender Infused Boots [WIP]
+item.ender_chestplate.name=Ender Infused Cheastplate [WIP]
+item.ender_helmet.name=Ender Infused Helmet [WIP]
+item.ender_leggings.name=Ender Infused Leggings [WIP]
+
+//Blocks
+tile.block_ender.name=Ender Infused Block
+
+//Ore
+tile.ender_ore.name=Ender Ore [WIP]

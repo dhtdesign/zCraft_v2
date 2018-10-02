@@ -1,0 +1,22 @@
+{ 
+    "type": "forge:ore_shapeless",
+
+    "ingredients": 
+    [
+        {
+         "item": "minecraft:iron_ingot"
+            
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "hammer"
+        }
+
+    ],
+
+    "result": 
+    {
+        "item": "zm:dust_iron",
+        "count": 1
+    }
+}

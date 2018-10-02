@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "II ",
+        "IS ",
+        " S "
+    ],
+    
+    "key":
+    {
+        "S":
+        {
+            "item": "minecraft:stick"
+        },
+         "I":
+        {
+            "item": "zm:ender_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "zm:ender_axe",
+        "count": 1
+    }
+}
