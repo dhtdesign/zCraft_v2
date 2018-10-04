@@ -67,9 +67,9 @@ public class ToolHammer extends Item implements IHasModel
     public void addInformation(ItemStack stack, World player, List<String> list, ITooltipFlag b) 
 	{
         super.addInformation(stack, player, list, b);
-        list.add(TextFormatting.DARK_GREEN + I18n.format("tooltip.gadget.block") );
-        list.add(TextFormatting.AQUA + I18n.format("tooltip.gadget.mode"));
-        list.add(TextFormatting.RED + I18n.format("tooltip.gadget.range"));
+        list.add(TextFormatting.DARK_GRAY + I18n.format("Use to get dust from items.") );
+        //list.add(TextFormatting.AQUA + I18n.format("tooltip.gadget.mode"));
+        //list.add(TextFormatting.RED + I18n.format("tooltip.gadget.range"));
 
     }
 }
