@@ -18,7 +18,7 @@ item.jump_blend.name=Jump Blend
 item.protein_bar.name=Protein Bar
 item.sugar_cube.name=Sugar Cube
 
-
+//Machines & Containers
 container.ender_chest=Ender Infused Chest
 tile.ender_chest.name=Ender Infused Chest
 
@@ -28,7 +28,7 @@ item.ender_axe.name=Ender Infused Axe
 item.ender_pickaxe.name=Ender Infused Pickaxe
 item.ender_shovel.name=Ender Infused Shovel
 item.ender_hoe.name=Ender Infused Hoe
-item.hammer.name=§r§eHammer [WIP]
+item.hammer.name=Hammer
 
 //Armor
 item.ender_boots.name=Ender Infused Boots [WIP]
