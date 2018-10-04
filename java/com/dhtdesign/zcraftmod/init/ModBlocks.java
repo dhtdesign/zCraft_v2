@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.dhtdesign.zcraftmod.blocks.BlockBase;
 import com.dhtdesign.zcraftmod.blocks.EnderBlock;
+import com.dhtdesign.zcraftmod.blocks.EnderChest;
 import com.dhtdesign.zcraftmod.blocks.EnderOre;
 
 import net.minecraft.block.Block;
@@ -22,4 +23,6 @@ public class ModBlocks
 	//Ore
 	public static final Block ENDER_ORE = new EnderOre("ender_ore",Material.ROCK);
 	
+	
+	public static final Block ENDER_CHEST = new EnderChest("ender_chest");
 }

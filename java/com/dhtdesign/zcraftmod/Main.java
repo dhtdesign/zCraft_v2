@@ -5,6 +5,7 @@ import com.dhtdesign.zcraftmod.init.ModRecipes;
 import com.dhtdesign.zcraftmod.proxy.CommonProxy;
 import com.dhtdesign.zcraftmod.util.Reference;
 import com.dhtdesign.zcraftmod.util.ZCraftTab;
+import com.dhtdesign.zcraftmod.util.handlers.RegistryHandler;
 import com.dhtdesign.zcraftmod.world.ModWorldGen;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -42,7 +43,11 @@ public class Main {
 	public static void init(FMLInitializationEvent event)
 	{
 		ModRecipes.init();
+		
 		OreDictionary.registerOre("hammer",  new ItemStack(ModItems.HAMMER, 1, OreDictionary.WILDCARD_VALUE));
+		
+		RegistryHandler.initRegistries();
+		
 	}
 	
 	@EventHandler

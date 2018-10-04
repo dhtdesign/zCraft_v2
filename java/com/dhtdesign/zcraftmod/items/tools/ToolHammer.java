@@ -10,8 +10,13 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 
 
 public class ToolHammer extends Item implements IHasModel
@@ -58,6 +63,16 @@ public class ToolHammer extends Item implements IHasModel
 		
 	}
 	
-	
-	
+	@Override
+    public void addInformation(ItemStack stack, World player, List<String> list, ITooltipFlag b) 
+	{
+        super.addInformation(stack, player, list, b);
+        list.add(TextFormatting.DARK_GREEN + I18n.format("tooltip.gadget.block") );
+        list.add(TextFormatting.AQUA + I18n.format("tooltip.gadget.mode"));
+        list.add(TextFormatting.RED + I18n.format("tooltip.gadget.range"));
+
+    }
 }
+	
+	
+
