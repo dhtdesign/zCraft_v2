@@ -19,7 +19,8 @@ item.protein_bar.name=Protein Bar
 item.sugar_cube.name=Sugar Cube
 
 
-
+container.ender_chest=Ender Infused Chest
+tile.ender_chest.name=Ender Infused Chest
 
 //Tools
 item.ender_sword.name=Ender Infused Sword
