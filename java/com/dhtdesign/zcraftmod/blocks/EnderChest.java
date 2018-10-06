@@ -4,8 +4,8 @@ import com.dhtdesign.zcraftmod.Main;
 import com.dhtdesign.zcraftmod.blocks.tileentity.TileEntityEnderChest;
 import com.dhtdesign.zcraftmod.init.ModBlocks;
 import com.dhtdesign.zcraftmod.init.ModItems;
-import com.dhtdesign.zcraftmod.util.IHasModel;
 import com.dhtdesign.zcraftmod.util.Reference;
+import com.dhtdesign.zcraftmod.util.interfaces.IHasModel;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

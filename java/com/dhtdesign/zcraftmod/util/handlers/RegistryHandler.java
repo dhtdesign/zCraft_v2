@@ -6,7 +6,7 @@ import com.dhtdesign.zcraftmod.blocks.animation.RenderEnderChest;
 import com.dhtdesign.zcraftmod.blocks.tileentity.TileEntityEnderChest;
 import com.dhtdesign.zcraftmod.init.ModBlocks;
 import com.dhtdesign.zcraftmod.init.ModItems;
-import com.dhtdesign.zcraftmod.util.IHasModel;
+import com.dhtdesign.zcraftmod.util.interfaces.IHasModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

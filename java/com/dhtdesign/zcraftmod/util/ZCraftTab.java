@@ -9,16 +9,7 @@ import net.minecraft.item.ItemStack;
 public class ZCraftTab extends CreativeTabs 
 {
 
-	public ZCraftTab() 
-	{
-		super("tabzCraft");
-	
-	}
-
-	@Override
-	public ItemStack getTabIconItem() 
-	{
-		return new ItemStack(ModItems.EXPLORERS_BLEND);
-	}
+	public ZCraftTab() { super("tabzCraft"); }
+	public ItemStack getTabIconItem() {	return new ItemStack(ModItems.ENDER_CRYSTAL);	}
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import com.dhtdesign.zcraftmod.Main;
 import com.dhtdesign.zcraftmod.init.ModBlocks;
 import com.dhtdesign.zcraftmod.init.ModItems;
-import com.dhtdesign.zcraftmod.util.IHasModel;
+import com.dhtdesign.zcraftmod.util.interfaces.IHasModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
