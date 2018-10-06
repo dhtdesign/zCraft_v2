@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "I I",
+        "III",
+        "III"
+    ],
+    
+    "key":
+    {
+         "I":
+        {
+            "item": "zm:ender_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "zm:ender_chestplate",
+        "count": 1
+    }
+}

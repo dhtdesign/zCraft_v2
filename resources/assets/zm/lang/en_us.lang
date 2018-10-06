@@ -3,6 +3,7 @@ itemGroup.tabzCraft=zCraft
 
 //Items
 item.ender_ingot.name=Ender Infused Ingot
+item.ingotazoporoit.name=Azoproit Ingot
 item.ender_nugget.name=Ender Infused Nugget
 item.ender_gear.name=Ender Infused Gear [WIP]
 item.ender_crystal.name=Ender Crystal [WIP]
