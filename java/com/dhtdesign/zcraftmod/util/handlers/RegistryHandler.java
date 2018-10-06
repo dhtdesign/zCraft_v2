@@ -6,10 +6,12 @@ import com.dhtdesign.zcraftmod.blocks.animation.RenderEnderChest;
 import com.dhtdesign.zcraftmod.blocks.tileentity.TileEntityEnderChest;
 import com.dhtdesign.zcraftmod.init.ModBlocks;
 import com.dhtdesign.zcraftmod.init.ModItems;
+import com.dhtdesign.zcraftmod.init.ModRecipes;
 import com.dhtdesign.zcraftmod.util.interfaces.IHasModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.event.RegistryEvent;
@@ -17,6 +19,7 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 @EventBusSubscriber
 public class RegistryHandler 
@@ -67,7 +70,16 @@ public class RegistryHandler
 	
 	public static void initRegistries()
 	{
+		ModRecipes.init();
+		
+		OreDictionary.registerOre("hammer",  new ItemStack(ModItems.HAMMER, 1, OreDictionary.WILDCARD_VALUE));
+		
 		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
+	}
+	
+	public static void postInitRegistries()
+	{
+		
 	}
 	
 }

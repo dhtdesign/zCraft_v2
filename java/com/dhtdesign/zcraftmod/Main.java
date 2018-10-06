@@ -6,7 +6,6 @@ import com.dhtdesign.zcraftmod.proxy.CommonProxy;
 import com.dhtdesign.zcraftmod.util.Reference;
 import com.dhtdesign.zcraftmod.util.ZCraftTab;
 import com.dhtdesign.zcraftmod.util.handlers.RegistryHandler;
-import com.dhtdesign.zcraftmod.world.ModWorldGen;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
@@ -29,31 +28,15 @@ public class Main {
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
-	public static CreativeTabs  zCraftTab = new ZCraftTab();
+	public static final CreativeTabs zCraftTab = new ZCraftTab();
 	
 	@EventHandler
-	public static void PreInit(FMLPreInitializationEvent event)
-	{
-		//GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
-		
-		
-	}
+	public static void PreInit(FMLPreInitializationEvent event) { RegistryHandler.preInitRegistries(); }
 	
 	@EventHandler
-	public static void init(FMLInitializationEvent event)
-	{
-		ModRecipes.init();
-		
-		OreDictionary.registerOre("hammer",  new ItemStack(ModItems.HAMMER, 1, OreDictionary.WILDCARD_VALUE));
-		
-		RegistryHandler.initRegistries();
-		
-	}
+	public static void init(FMLInitializationEvent event) {	RegistryHandler.initRegistries(); }
 	
 	@EventHandler
-	public static void PostInit(FMLPostInitializationEvent event)
-	{
-		
-	}
+	public static void PostInit(FMLPostInitializationEvent event) {	RegistryHandler.postInitRegistries(); }
 	
 }
