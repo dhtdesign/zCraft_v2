@@ -40,4 +40,6 @@ item.ender_leggings.name=Ender Infused Leggings [WIP]
 tile.block_ender.name=Ender Infused Block
 
 //Ore
-tile.ender_ore.name=Ender Ore [WIP]
+tile.ore_overworld_azoproit.name=Azoproit Ore
+tile.ore_nether_azoproit.name=Azoproit Ore
+tile.ore_end_azoproit.name=Azoproit Ore

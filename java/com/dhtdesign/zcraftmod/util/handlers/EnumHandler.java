@@ -6,7 +6,8 @@ public class EnumHandler
 {
 	public static enum EnumType implements IStringSerializable
 	{
-		AZOPROIT(0, "copper");
+		AZOPROIT(0, "azoproit"),
+		TEST(1, "test");
 		
 		private static final EnumType[] META_LOOKUP = new EnumType[values().length];
 		private final int meta;
