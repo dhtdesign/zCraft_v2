@@ -13,7 +13,7 @@ public class ModRecipes {
 		//GameRegistry.addSmelting(ModItems.ENDER_INGOT, new ItemStack(ModBlocks.BLOCK_ENDER, 1), 1.5F);
 		//GameRegistry.addSmelting(ModBlocks.BLOCK_ENDER, new ItemStack(Blocks.DIAMOND_BLOCK, 64), 3.5F);
 		GameRegistry.addSmelting(ModItems.DUST_IRON, new ItemStack(Items.IRON_INGOT, 1), 0.8F);
-		GameRegistry.addSmelting(ModItems.ENDER_DUST, new ItemStack(ModItems.ENDER_INGOT, 1), 0.8F);
+		GameRegistry.addSmelting(ModItems.ENDER_DUST, new ItemStack(ModItems.INGOT_ENDER, 1), 0.8F);
 		
 		//Potions
 		

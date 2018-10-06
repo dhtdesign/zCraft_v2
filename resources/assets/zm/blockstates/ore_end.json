@@ -1,6 +1,6 @@
 {
     "variants": 
     {
-        "variants=azoproit": { "model": "zm:ore_end_azoproit" }
+        "variant=azoproit": { "model": "zm:ore_end_azoproit" }
     }
 }

@@ -22,9 +22,9 @@ public class WorldGenCustomOres implements IWorldGenerator
 	
 	public WorldGenCustomOres() 
 	{
-		ore_nether_azoproit = new WorldGenMinable(ModBlocks.ORE_NETHER.getDefaultState().withProperty(BlockOres.VARIANT, EnumHandler.EnumType.AZOPROIT), 9, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		ore_overworld_azoproit = new WorldGenMinable(ModBlocks.ORE_OVERWORLD.getDefaultState().withProperty(BlockOres.VARIANT, EnumHandler.EnumType.AZOPROIT), 9, BlockMatcher.forBlock(Blocks.STONE));
-		ore_end_azoproit = new WorldGenMinable(ModBlocks.ORE_END.getDefaultState().withProperty(BlockOres.VARIANT, EnumHandler.EnumType.AZOPROIT), 9, BlockMatcher.forBlock(Blocks.END_STONE));
+		ore_nether_azoproit = new WorldGenMinable(ModBlocks.ORE_NETHER.getDefaultState().withProperty(BlockOres.VARIANT, EnumHandler.EnumType.AZOPROIT), 3, BlockMatcher.forBlock(Blocks.NETHERRACK));	
+		ore_overworld_azoproit = new WorldGenMinable(ModBlocks.ORE_OVERWORLD.getDefaultState().withProperty(BlockOres.VARIANT, EnumHandler.EnumType.AZOPROIT), 3, BlockMatcher.forBlock(Blocks.STONE));
+		ore_end_azoproit = new WorldGenMinable(ModBlocks.ORE_END.getDefaultState().withProperty(BlockOres.VARIANT, EnumHandler.EnumType.AZOPROIT), 3, BlockMatcher.forBlock(Blocks.END_STONE));
 		
 	}
 	
@@ -36,21 +36,21 @@ public class WorldGenCustomOres implements IWorldGenerator
 		{
 		case -1:
 			
-			runGenerator(ore_nether_azoproit, world, random, chunkX, chunkZ, 50, 0, 100);
+			runGenerator(ore_nether_azoproit, world, random, chunkX, chunkZ, 3, 0, 100);
 	
 			
 			break;
 			
 		case 0:
 			
-			runGenerator(ore_nether_azoproit, world, random, chunkX, chunkZ, 50, 0, 100);
+			runGenerator(ore_overworld_azoproit, world, random, chunkX, chunkZ, 15, 5, 15);
 
 			
 			break;
 			
 		case 1:
 			
-			runGenerator(ore_nether_azoproit, world, random, chunkX, chunkZ, 50, 0, 256);
+			runGenerator(ore_end_azoproit, world, random, chunkX, chunkZ, 3, 0, 256);
 
 		}
 		
