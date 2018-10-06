@@ -36,6 +36,7 @@ public class BlockOres extends Block implements IHasModel, IMetaName
 		setRegistryName(name);
 		setCreativeTab(Main.zCraftTab);
 		setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, EnumHandler.EnumType.AZOPROIT));
+		setHarvestLevel("pickaxe", 3);
 		
 		this.name = name;
 		this.dimension = dimension;

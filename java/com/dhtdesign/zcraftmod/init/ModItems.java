@@ -38,7 +38,8 @@ public class ModItems
 	public static final ArmorMaterial ARMOR_MATERIAL_ENDER = EnumHelper.addArmorMaterial("armor_material_ender", Reference.MOD_ID + ":ender", 14, new int[] {5, 8, 10, 4}, 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F);
 	
 	// Items
-	public static final Item ENDER_INGOT = new ItemBase("ender_ingot");
+	public static final Item INGOT_ENDER = new ItemBase("ender_ingot");
+	public static final Item INGOT_AZOPROIT = new ItemBase("ingot_azoproit");
 	public static final Item ENDER_NUGGET = new ItemBase("ender_nugget");
 	public static final Item ENDER_PEARL_DUST = new ItemBase("ender_pearl_dust");
 	public static final Item DUST_IRON = new ItemBase("dust_iron");

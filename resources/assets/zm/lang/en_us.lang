@@ -41,5 +41,5 @@ tile.block_ender.name=Ender Infused Block
 
 //Ore
 tile.ore_overworld_azoproit.name=Azoproit Ore
-tile.ore_nether_azoproit.name=Azoproit Ore
-tile.ore_end_azoproit.name=Azoproit Ore
+tile.ore_nether_azoproit.name=Azoproit Ore [WIP]
+tile.ore_end_azoproit.name=Azoproit Ore [WIP]
