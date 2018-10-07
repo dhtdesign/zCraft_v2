@@ -14,7 +14,7 @@ public class EnderBlock extends BlockBase
 		setHardness(6.0F);
 		setResistance(45.0F);
 		setHarvestLevel("pickaxe", 3);
-		setLightLevel(1.0F);
+		//setLightLevel(1.0F);
 		//setLightOpacity(1);
 		//setBlockUnbreakable();
 	}

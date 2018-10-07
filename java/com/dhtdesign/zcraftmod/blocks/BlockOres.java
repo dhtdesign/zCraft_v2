@@ -9,6 +9,7 @@ import com.dhtdesign.zcraftmod.util.interfaces.IHasModel;
 import com.dhtdesign.zcraftmod.util.interfaces.IMetaName;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -37,6 +38,8 @@ public class BlockOres extends Block implements IHasModel, IMetaName
 		setCreativeTab(Main.zCraftTab);
 		setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, EnumHandler.EnumType.AZOPROIT));
 		setHarvestLevel("pickaxe", 3);
+		setHardness(6.0F);
+		setSoundType(SoundType.STONE);
 		
 		this.name = name;
 		this.dimension = dimension;

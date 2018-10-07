@@ -1,5 +1,6 @@
 package com.dhtdesign.zcraftmod.blocks.tileentity;
 
+import com.dhtdesign.zcraftmod.blocks.EnderChest;
 import com.dhtdesign.zcraftmod.blocks.container.ContainerEnderChest;
 import com.dhtdesign.zcraftmod.util.Reference;
 
@@ -10,7 +11,9 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntityLockableLoot;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
@@ -19,10 +22,40 @@ import net.minecraft.util.math.AxisAlignedBB;
 public class TileEntityEnderChest extends TileEntityLockableLoot implements ITickable
 {
 	private NonNullList<ItemStack> chestContent = NonNullList.<ItemStack>withSize(72, ItemStack.EMPTY);
-	public int numPlayerUsing, ticksSinceSync;
-	public float lidAngle, prevLidAngle;
+	public int numPlayerUsing;
+
 	
+
+    /** The current angle of the lid (between 0 and 1) */
+    public float lidAngle;
+
+    /** The angle of the lid last tick */
+    public float prevLidAngle;
+
+    /** The number of players currently using this chest */
+    public int numPlayersUsing;
 	
+    /** Server sync counter (once per 20 ticks) */
+    private int ticksSinceSync;
+    
+	 /** Direction chest is facing */
+	private EnumFacing facing;
+	
+    /** Chest Contents */
+    public NonNullList<ItemStack> chestContents;
+
+    /** Crystal Chest top stacks */
+    private NonNullList<ItemStack> topStacks;
+    
+    
+    
+    
+    public TileEntityEnderChest() {
+    	super();
+    	
+    	this.facing = EnumFacing.NORTH;
+    	
+	}
 	
 	@Override
 	public int getSizeInventory()
@@ -171,5 +204,46 @@ public class TileEntityEnderChest extends TileEntityLockableLoot implements ITic
 		
 		return 64;
 	} 
+	
+	 public EnumFacing getFacing()
+	    {
+	        return this.facing;
+	}
+	
+	 public void setFacing(EnumFacing facing)
+	    {
+	        this.facing = facing;
+	}
+	
+	@Override
+	public SPacketUpdateTileEntity getUpdatePacket()
+	{
+		NBTTagCompound compound = new NBTTagCompound();
+
+	    compound.setByte("facing", (byte) this.facing.ordinal());
+
+	    return new SPacketUpdateTileEntity(this.pos, 0, compound);
+	}
+	   
+	public void rotateAround()
+	{
+	    this.setFacing(this.facing.rotateY());
+
+	    this.world.addBlockEvent(this.pos, EnderChest.enderChestBlock, 2, this.facing.ordinal());
+	}
+	
+	   @Override
+	    public boolean canRenderBreaking()
+	    {
+	        return true;
+	}
+	   
+
+	    public NonNullList<ItemStack> getTopItems()
+	    {
+	        return this.topStacks;
+	    }
+
+
 	
 }
