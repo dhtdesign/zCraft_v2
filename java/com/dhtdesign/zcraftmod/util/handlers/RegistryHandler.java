@@ -10,6 +10,7 @@ import com.dhtdesign.zcraftmod.init.ModRecipes;
 import com.dhtdesign.zcraftmod.util.compat.OreDictionaryCompat;
 import com.dhtdesign.zcraftmod.util.interfaces.IHasModel;
 import com.dhtdesign.zcraftmod.world.gen.WorldGenCustomOres;
+import com.dhtdesign.zcraftmod.world.gen.WorldGenCustomStructures;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -75,6 +76,7 @@ public class RegistryHandler
 	public static void preInitRegistries()
 	{
 		RegistryHandler.otherRegisters();
+		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
 		
 	}
 	
