@@ -18,5 +18,6 @@ public class EnderBlock extends BlockBase
 		//setLightOpacity(1);
 		//setBlockUnbreakable();
 	}
+	
 
 }
