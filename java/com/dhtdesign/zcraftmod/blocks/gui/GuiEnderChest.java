@@ -11,36 +11,39 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 
-public class GuiEnderChest extends GuiContainer
-{
+public class GuiEnderChest extends GuiContainer {
 
 	private static final ResourceLocation GUI_CHEST = new ResourceLocation(Reference.MOD_ID + ":textures/gui/ender_chest.png");
 	private final InventoryPlayer playerInventory;
 	private final TileEntityEnderChest te;
-	
-	public GuiEnderChest(InventoryPlayer playerInventory, TileEntityEnderChest chestInventory, EntityPlayer player) 
-	{
+
+	public GuiEnderChest(InventoryPlayer playerInventory, TileEntityEnderChest chestInventory, EntityPlayer player) {
 		super(new ContainerEnderChest(playerInventory, chestInventory, player));
 		this.playerInventory = playerInventory;
 		this.te = chestInventory;
-		
+
 		this.xSize = 179;
 		this.ySize = 256;
 	}
-	
+
 	@Override
-	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) 
-	{
+	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		this.fontRenderer.drawString(this.te.getDisplayName().getUnformattedText(), 8, 6, 16777215);
 		this.fontRenderer.drawString(this.playerInventory.getDisplayName().getUnformattedText(), 8, this.ySize - 92, 16777215);
 	}
-	
+
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY)
-	{
+	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
 		GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
 		this.mc.getTextureManager().bindTexture(GUI_CHEST);
 		this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
-}
+	}
+
+	@Override
+	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+		drawDefaultBackground();
+		super.drawScreen(mouseX, mouseY, partialTicks);
+		renderHoveredToolTip(mouseX, mouseY);
+	}
 
 }

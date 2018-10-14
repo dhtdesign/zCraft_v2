@@ -15,10 +15,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class BlockBase extends Block implements IHasModel
-{
+public class BlockBase extends Block implements IHasModel {
 	public BlockBase(String name, Material material)
-	
+
 	{
 		super(material);
 		setUnlocalizedName(name);
@@ -26,20 +25,16 @@ public class BlockBase extends Block implements IHasModel
 		setCreativeTab(Main.zCraftTab);
 		setHardness(3.0F);
 		setHarvestLevel("pickaxe", 1);
-		
+
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
-		
-	
+
 	}
 
 	@Override
-	public void registerModels() 
-	{
-		
+	public void registerModels() {
+
 		Main.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
 	}
 
-
-	
 }
