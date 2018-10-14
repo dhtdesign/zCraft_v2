@@ -10,6 +10,8 @@ item.ender_crystal.name=Ender Crystal [WIP]
 item.dust_iron.name=Iron Dust
 item.ender_dust.name=Ender Infused Dust
 item.ender_pearl_dust.name=Ender Pearl Dust
+item.pouch.name=Pouch
+
 
 //Potions & Food
 item.haste_blend.name=Haste Blend

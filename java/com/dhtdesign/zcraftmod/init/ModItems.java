@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.dhtdesign.zcraftmod.items.ItemBase;
-import com.dhtdesign.zcraftmod.items.Pouch;
+import com.dhtdesign.zcraftmod.items.ItemPouch;
 import com.dhtdesign.zcraftmod.items.armor.ArmorBase;
 import com.dhtdesign.zcraftmod.items.food.ItemCustomFood;
 import com.dhtdesign.zcraftmod.items.food.ItemProteinBar;
@@ -47,7 +47,7 @@ public class ModItems
 	public static final Item ENDER_DUST = new ItemBase("ender_dust");
 	public static final Item ENDER_CRYSTAL = new ItemBase("ender_crystal");
 	public static final Item ENDER_GEAR = new ItemBase("ender_gear");
-	public static final Item POUCH = new Pouch("pouch");
+	public static final Item POUCH = new ItemPouch("pouch");
 	
 	//Tools
 	public static final ItemSword ENDER_SWORD = new ToolSword("ender_sword", MATERIAL_ENDER);
