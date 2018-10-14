@@ -46,7 +46,7 @@ public class TileEntityPouch extends TileEntityLockableLoot implements ITickable
 
 	@Override
 	public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn) {
-		return new ContainerPouch(playerInventory, this, playerIn);
+		return new ContainerPouch(playerInventory, this, playerIn, null);
 	}
 
 	@Override

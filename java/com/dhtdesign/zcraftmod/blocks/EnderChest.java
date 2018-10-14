@@ -7,6 +7,7 @@ import com.dhtdesign.zcraftmod.blocks.tileentity.TileEntityEnderChest;
 import com.dhtdesign.zcraftmod.init.ModBlocks;
 import com.dhtdesign.zcraftmod.init.ModItems;
 import com.dhtdesign.zcraftmod.util.Reference;
+import com.dhtdesign.zcraftmod.util.handlers.GuiHandler;
 import com.dhtdesign.zcraftmod.util.interfaces.IHasModel;
 
 import net.minecraft.block.Block;
@@ -33,8 +34,7 @@ import net.minecraft.world.World;
 
 public class EnderChest extends BlockContainer implements IHasModel {
 
-	protected static final AxisAlignedBB ENDER_CHEST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0625D, 0.9375D, 0.875D,
-			0.9375D);
+	protected static final AxisAlignedBB ENDER_CHEST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0625D, 0.9375D, 0.875D, 0.9375D);
 
 	// public static EnderChest enderChestBlock;
 
@@ -48,6 +48,7 @@ public class EnderChest extends BlockContainer implements IHasModel {
 		setCreativeTab(Main.zCraftTab);
 
 		ModBlocks.BLOCKS.add(this);
+		
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 
 	}
@@ -61,7 +62,7 @@ public class EnderChest extends BlockContainer implements IHasModel {
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn,
 			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		if (!worldIn.isRemote) {
-			playerIn.openGui(Main.instance, Reference.GUI_ENDER_CHEST, worldIn, pos.getX(), pos.getY(), pos.getZ());
+			playerIn.openGui(Main.instance, GuiHandler.GUI_ENDER_CHEST, worldIn, pos.getX(), pos.getY(), pos.getZ());
 			//playerIn.sendMessage(new TextComponentString(TextFormatting.DARK_RED + "test"));
 		}
 

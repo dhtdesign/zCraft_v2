@@ -26,15 +26,13 @@ public class GuiHandler implements IGuiHandler {
 
 		int handId = 0;
 		EnumHand hand = handId == 1 ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND;
-		
+
 		switch (ID) {
 		case GUI_ENDER_CHEST: {
 			return new ContainerEnderChest(player.inventory,
 					(TileEntityEnderChest) world.getTileEntity(new BlockPos(x, y, z)), player);
 		}
 		case GUI_POUCH: {
-			
-		
 
 			return new ContainerPouch(player.inventory, null, player, hand);
 		}
@@ -46,16 +44,19 @@ public class GuiHandler implements IGuiHandler {
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 
+		int handId = 0;
+		EnumHand hand = handId == 1 ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND;
+
 		switch (ID) {
 		case GUI_ENDER_CHEST: {
-			return new GuiEnderChest(player.inventory,
-					(TileEntityEnderChest) world.getTileEntity(new BlockPos(x, y, z)), player);
+			return new GuiEnderChest(player.inventory, (TileEntityEnderChest) world.getTileEntity(new BlockPos(x, y, z)), player);
 
 		}
 		case GUI_POUCH: {
 
-			return new GuiPouch(new ContainerPouch(player.inventory, hand));
+			return new GuiPouch(player.inventory, null, player);
 		}
+
 		}
 
 		return null;

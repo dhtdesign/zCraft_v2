@@ -18,6 +18,7 @@ public class ContainerPouch extends Container {
 	public ContainerPouch(InventoryPlayer playerInv, TileEntityPouch pouchInventory, EntityPlayer player, EnumHand hand) {
 		this.pouchInventory = pouchInventory;
 		this.numRows = pouchInventory.getSizeInventory() / 9;
+		hand = EnumHand.MAIN_HAND;
 		pouchInventory.openInventory(player);
 
 		for (int i = 0; i < this.numRows; ++i) {
@@ -82,6 +83,13 @@ public class ContainerPouch extends Container {
 
 	public TileEntityPouch getPouchtInventory() {
 		return this.pouchInventory;
+	}
+
+
+
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
